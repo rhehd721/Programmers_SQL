@@ -1,0 +1,1 @@
+SELECT ANIMAL_ID, NAME from ANIMAL_INS WHERE (NAME LIKE '%el%' or '%EL%') and ANIMAL_TYPE = 'Dog' order by name;

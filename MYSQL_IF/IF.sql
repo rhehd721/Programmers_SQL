@@ -1,0 +1,1 @@
+SELECT ANIMAL_TYPE, if(isnull(NAME), 'No name', NAME) , SEX_UPON_INTAKE from ANIMAL_INS order by ANIMAL_ID
