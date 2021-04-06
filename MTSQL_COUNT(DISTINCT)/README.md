@@ -1,0 +1,3 @@
+# COUNT(DISTINCT)
+- SELECT COUNT(DISTINCT *) FROM cloumn_name;
+
