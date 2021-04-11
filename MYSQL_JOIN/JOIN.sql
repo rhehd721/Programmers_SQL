@@ -27,3 +27,10 @@ FROM ANIMAL_INS TABLE_A
 inner JOIN ANIMAL_OUTS TABLE_B ON TABLE_A.ANIMAL_ID = TABLE_B.ANIMAL_ID
 where SEX_UPON_INTAKE != SEX_UPON_OUTCOME
 order by TABLE_A.ANIMAL_ID
+
+with recursive TIME as
+(select 0 as hour union all select hour+1 from time where hour<23)
+select hour, count(animal_id) count
+from TIME
+left outer join ANIMAL_OUTS on (hour = date_format(datetime, '%H') )
+group by hour;
