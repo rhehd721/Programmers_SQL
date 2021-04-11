@@ -8,6 +8,6 @@
 WITH RECURSIVE Table_name AS(
     SELECT 1 AS h
     UNION ALL
-    SELECT h+1 FROM CTE WHERE h < 5)
-SELECT * FROM CTE
+    SELECT h+1 FROM Table_name WHERE h < 5)
+SELECT * FROM Table_name
 ```
